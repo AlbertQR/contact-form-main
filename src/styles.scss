@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Karla, sans-serif;
+  font-size: 16px;
+}
+
+@layer base {
+  body {
+    @apply bg-lightGreen;
+  }
+
+  label {
+    @apply font-normal text-darkGrey;
+  }
+}
+
+@layer components {
+  .field {
+    @apply border rounded-md w-full px-6 py-2 border-mediumGrey
+    text-darkGrey focus:border-green hover:border-green
+    cursor-pointer outline-0 text-lg mt-3.5;
+  }
+
+  .form-control {
+    @apply w-full;
+  }
+
+  .error-message {
+    @apply text-red mt-3 text-[0.95rem];
+  }
+}

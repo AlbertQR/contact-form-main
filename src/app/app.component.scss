@@ -1,0 +1,38 @@
+#consent {
+  &:checked {
+    & ~ .box {
+      display: none;
+    }
+
+    & ~ .icon-checked {
+      display: block;
+    }
+  }
+
+  &:not(checked) ~ .icon-checked {
+    display: none;
+  }
+}
+
+input[type='radio'] {
+  &:checked {
+    ~ label {
+      background-color: hsl(148, 38%, 91%);
+      border-color: hsl(169, 82%, 27%) !important;
+
+      .radio-selected {
+        display: block;
+      }
+
+      .circle {
+        display: none;
+      }
+    }
+  }
+
+  &:not(checked) {
+    ~ label .radio-selected {
+      display: none;
+    }
+  }
+}
